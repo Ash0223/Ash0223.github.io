@@ -84,3 +84,39 @@
 .travel-photo:nth-child(5) img{object-position:center 45%;}
 @media(max-width:900px){.portrait-stage{width:min(390px,78vw);height:500px}.portrait-stage .portrait{width:min(350px,100%);max-height:500px}.travel-grid{grid-template-columns:repeat(2,minmax(0,1fr));grid-template-rows:repeat(3,250px);}.travel-photo{height:250px;}}
 @media(max-width:600px){.portrait-stage{width:320px;height:450px}.portrait-stage .portrait{width:310px;max-height:450px}.travel-grid{grid-template-columns:1fr;grid-template-rows:repeat(6,330px)}.travel-photo{height:330px;}}
+
+
+/* Certifications and live coding profiles */
+.certificate-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px;margin-top:45px;}
+.certificate-card{display:grid;grid-template-columns:150px 1fr;gap:22px;align-items:stretch;border:1px solid var(--line);border-radius:16px;padding:14px;text-decoration:none;color:inherit;background:linear-gradient(145deg,rgba(168,85,247,.07),rgba(255,255,255,.015));transition:transform .25s ease,border-color .25s ease,background .25s ease;}
+.certificate-card:hover{transform:translateY(-4px);border-color:rgba(192,132,252,.45);background:linear-gradient(145deg,rgba(168,85,247,.12),rgba(255,255,255,.025));}
+.certificate-thumb{height:180px;border-radius:10px;overflow:hidden;background:#0b0910;border:1px solid var(--line);}
+.certificate-thumb img{width:100%;height:100%;display:block;object-fit:cover;object-position:center;}
+.certificate-info{padding:7px 4px 5px 0;display:flex;flex-direction:column;justify-content:center;}
+.certificate-provider{font-size:9px;letter-spacing:.16em;font-weight:700;color:#c084fc;}
+.certificate-info h3{font-family:"Space Grotesk";font-size:18px;line-height:1.25;margin:9px 0 8px;}
+.certificate-info p{color:var(--muted);font-size:11px;line-height:1.55;}
+.certificate-link,.coding-link{display:inline-block;margin-top:15px;color:#fff;font-size:10px;font-weight:700;letter-spacing:.03em;}
+.coding-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px;}
+.coding-card{position:relative;min-height:340px;border:1px solid var(--line);border-radius:18px;padding:30px;background:linear-gradient(145deg,rgba(168,85,247,.08),rgba(255,255,255,.015));overflow:hidden;}
+.coding-card:after{content:"";position:absolute;width:220px;height:220px;border-radius:50%;right:-90px;top:-100px;background:rgba(168,85,247,.10);filter:blur(50px);pointer-events:none;}
+.coding-top{display:flex;align-items:center;justify-content:space-between;gap:15px;}
+.coding-provider{font-family:"Space Grotesk";font-size:12px;font-weight:700;letter-spacing:.14em;color:#fff;}
+.live-badge,.profile-badge{font-size:9px;letter-spacing:.12em;font-weight:700;color:#c084fc;border:1px solid rgba(192,132,252,.25);padding:6px 9px;border-radius:999px;}
+.live-badge{display:flex;align-items:center;gap:6px;}
+.live-badge i{width:6px;height:6px;border-radius:50%;background:#c084fc;box-shadow:0 0 10px rgba(192,132,252,.8);animation:pulse-live 1.7s ease-in-out infinite;}
+.coding-main{margin:36px 0 24px;}
+.coding-number{font-family:"Space Grotesk";font-size:64px;font-weight:700;line-height:1;color:#fff;}
+.coding-label{margin-top:7px;color:var(--muted);font-size:11px;text-transform:uppercase;letter-spacing:.13em;}
+.difficulty-grid{display:grid;grid-template-columns:repeat(3,1fr);border-top:1px solid var(--line);border-bottom:1px solid var(--line);}
+.difficulty-grid div{padding:14px 8px;display:flex;flex-direction:column;gap:2px;}
+.difficulty-grid div+div{border-left:1px solid var(--line);}
+.difficulty-grid strong{font-family:"Space Grotesk";font-size:20px;}
+.difficulty-grid span{color:var(--muted);font-size:9px;text-transform:uppercase;letter-spacing:.12em;}
+.coding-status{color:#777080;font-size:10px;margin-top:14px;min-height:15px;}
+.hr-stars{display:flex;gap:7px;margin:38px 0 22px;color:#c084fc;font-size:23px;letter-spacing:.02em;}
+.hr-course h3{font-family:"Space Grotesk";font-size:25px;margin-top:9px;}
+.hr-course p{color:var(--muted);font-size:11px;line-height:1.65;margin-top:8px;max-width:500px;}
+@keyframes pulse-live{0%,100%{opacity:.55;transform:scale(.9)}50%{opacity:1;transform:scale(1.12)}}
+@media(max-width:900px){.certificate-grid,.coding-grid{grid-template-columns:1fr}.certificate-card{grid-template-columns:130px 1fr}}
+@media(max-width:600px){.certificate-card{grid-template-columns:1fr}.certificate-thumb{height:220px}.coding-card{padding:24px}.coding-number{font-size:55px}.profile-badge{font-size:8px}}

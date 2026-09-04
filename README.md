@@ -15,3 +15,9 @@ The transparent profile PNG is used only by the portfolio. The résumé intentio
 
 
 Portfolio direction: Java/Spring Boot remains the primary engineering focus, with AI exploration positioned as the next layer. The Outside Work section is ready for weekend travel photos.
+
+
+## Live coding profiles
+The Netlify deployment includes a serverless LeetCode stats endpoint at `/.netlify/functions/leetcode`. GitHub Pages can still host the static portfolio, but live LeetCode data requires the Netlify deployment because GitHub Pages does not run server-side functions.
+
+The HackerRank card links to the public profile. HackerRank's public profile currently does not expose the latest completed course/star rating needed for a reliable live card, so that value is intentionally not guessed.
